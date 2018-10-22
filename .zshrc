@@ -1,4 +1,4 @@
-TOOLBOX_BOOTSTRAP="~/projects/toolbox/var/bootstrap.zsh"
+TOOLBOX_BOOTSTRAP="$HOME/projects/toolbox/var/bootstrap.zsh"
 if [ -f ${TOOLBOX_BOOTSTRAP} ]; then
 	source "${TOOLBOX_BOOTSTRAP}"
 fi
