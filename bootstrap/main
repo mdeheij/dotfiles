@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 mkdir -p ~/projects
 
-sudo apt-get -y install whois ssh sshpass gnome-tweak-tool vim-nox git terminator curl inkscape gimp silversearcher-ag ssh-askpass tmux moreutils gnupg2 gnome-calculator shellcheck gnuplot rename thunderbird-locale-nl hunspell-dictionary-nl hyphen-nl libreoffice-l10n-nl libreoffice-help-nl virtualenv python-dev libldap2-dev libsasl2-dev gconf-service gconf-service-backend gconf2 gconf2-common libappindicator1 libgconf-2-4 libindicator7 libmariadbclient-dev graphviz apache2 git pass jq htop virtualbox telegram-desktop
+sudo apt-get -y install whois ssh sshpass gnome-tweak-tool vim-nox git terminator curl inkscape gimp silversearcher-ag ssh-askpass tmux moreutils gnupg2 gnome-calculator shellcheck gnuplot rename thunderbird-locale-nl hunspell-dictionary-nl hyphen-nl libreoffice-l10n-nl libreoffice-help-nl virtualenv python-dev libldap2-dev libsasl2-dev gconf-service gconf-service-backend gconf2 gconf2-common libappindicator1 libgconf-2-4 libindicator7 libmariadbclient-dev graphviz apache2 git pass jq htop virtualbox telegram-desktop fonts-powerline
