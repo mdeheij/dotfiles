@@ -2,7 +2,7 @@
 
 curl -sL https://dl.google.com/go/go1.11.1.linux-amd64.tar.gz -o - | sudo tar zxf - -C /usr/local/
 
-if [ -f ~/.zshrc ]; then
-	echo 'PATH="${PATH}:/usr/local/go/bin:${GOPATH}/bin"' >> ~/.zshrc
-fi
-echo 'PATH="${PATH}:/usr/local/go/bin:${GOPATH}/bin"' >> ~/.bashrc
+#if [ -f ~/.zshrc ]; then
+#	echo 'PATH="${PATH}:/usr/local/go/bin:${GOPATH}/bin"' >> ~/.zshrc
+#fi
+#echo 'PATH="${PATH}:/usr/local/go/bin:${GOPATH}/bin"' >> ~/.bashrc
