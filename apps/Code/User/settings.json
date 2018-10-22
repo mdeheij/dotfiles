@@ -1,0 +1,17 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Monokai Classic",
+    "editor.fontFamily": "'Ubuntu Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontWeight": "400",
+    "editor.fontSize": 16,
+    "window.menuBarVisibility": "default",
+    "powermode.explosionDuration": 500,
+    "powermode.comboThreshold": 5,
+    "powermode.enabled": true,
+    "powermode.enableShake": false,
+    "spotify.forceWebApiImplementation": true,
+    "spotify.enableLogs": true,
+    "window.titleBarStyle": "custom",
+    "editor.wordWrap": "on",
+    "telemetry.enableTelemetry": false
+}
