@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+curl -L https://go.microsoft.com/fwlink/?LinkID=760868 -o /tmp/code.deb
+sudo dpkg -i /tmp/code.deb
+rm -rf /tmp/code.deb

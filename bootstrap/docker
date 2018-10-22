@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+sudo apt-get install docker-ce
