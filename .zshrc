@@ -104,3 +104,4 @@ prompt_context() {}
 GOPATH="${HOME}/go"
 PATH="${PATH}:/usr/local/go/bin:${GOPATH}/bin"
 PATH="${PATH}:${HOME}/scripts"
+alias poeloleoleoeleo="busctl --user call org.gnome.Shell /org/gnome/Shell org.gnome.Shell Eval s 'Meta.restart(\"poeloleoleoeleo\")'"
