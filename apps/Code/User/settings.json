@@ -1,6 +1,5 @@
 {
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Monokai Classic",
     "editor.fontFamily": "'Ubuntu Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontWeight": "400",
     "editor.fontSize": 16,
@@ -13,5 +12,7 @@
     "spotify.enableLogs": true,
     "window.titleBarStyle": "custom",
     "editor.wordWrap": "on",
-    "telemetry.enableTelemetry": false
+    "telemetry.enableTelemetry": false,
+    "window.zoomLevel": 1,
+    "workbench.colorTheme": "Default Light+"
 }
