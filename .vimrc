@@ -38,6 +38,8 @@ set cursorline
 set scrolloff=999
 set encoding=utf-8
 colorscheme monokai
+
+set autochdir
 let g:rehash256 = 1
 " plugin customizations
 " neocomplete
@@ -94,7 +96,7 @@ nmap <F2> :tabnew<CR>
 nmap <F3> :tabclose<CR>
 nmap <F5> :UndotreeToggle<CR>
 nmap <F7> :NERDTreeTabsToggle<CR>
-nmap <F8> :TagbarToggle<CR>
+nmap <F8> :NERDTreeFocus<CR>
 nmap <C-Left> :tabprevious<CR>
 nmap <C-Right> :tabnext<CR>
 
