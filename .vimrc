@@ -6,10 +6,11 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-if empty(glob('~/.vim/colors/molokai.vim'))
-  silent !curl -fLo ~/.vim/colors/molokai.vim --create-dirs
-    \ https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim
+if empty(glob('~/.vim/colors/monokai.vim'))
+  silent !curl -fLo ~/.vim/colors/monokai.vim --create-dirs
+	\ https://raw.githubusercontent.com/sickill/vim-monokai/master/colors/monokai.vim
 endif
+
 
 call plug#begin()
 
@@ -36,8 +37,8 @@ set number
 set cursorline
 set scrolloff=999
 set encoding=utf-8
-colorscheme molokai
-
+colorscheme monokai
+let g:rehash256 = 1
 " plugin customizations
 " neocomplete
 let g:neocomplete#enable_at_startup = 1
