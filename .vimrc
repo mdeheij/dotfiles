@@ -1,5 +1,16 @@
 set nocompatible              " be iMproved
 
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+if empty(glob('~/.vim/colors/molokai.vim'))
+  silent !curl -fLo ~/.vim/colors/molokai.vim --create-dirs
+    \ https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim
+endif
+
 call plug#begin()
 
 " custom plugins
