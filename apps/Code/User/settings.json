@@ -6,7 +6,6 @@
     "window.menuBarVisibility": "default",
     "powermode.explosionDuration": 500,
     "powermode.comboThreshold": 5,
-    "powermode.enabled": true,
     "powermode.enableShake": false,
     "spotify.forceWebApiImplementation": true,
     "spotify.enableLogs": true,
@@ -14,5 +13,8 @@
     "editor.wordWrap": "on",
     "telemetry.enableTelemetry": false,
     "window.zoomLevel": 1,
+    "vsicons.projectDetection.disableDetect": true,
+    "files.autoSave": "afterDelay",
+    "editor.multiCursorModifier": "ctrlCmd",
     "workbench.colorTheme": "Default Light+"
 }
