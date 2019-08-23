@@ -68,12 +68,16 @@ ZSH_THEME="agnoster"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  toolbox
 )
 
 source $ZSH/oh-my-zsh.sh
 
 prompt_context() {}
+
 # User configuration
+
+autoload -U compinit && compinit
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -107,4 +111,3 @@ PATH="${PATH}:${HOME}/scripts"
 alias o='composer'
 
 eval $(thefuck --alias)
-#eval "$(direnv hook zsh)"
