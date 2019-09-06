@@ -122,3 +122,4 @@ au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 au FileType go nmap <Leader>e <Plug>(go-rename)
 
 set mouse=a
+set clipboard=unnamedplus

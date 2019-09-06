@@ -109,5 +109,12 @@ GOPATH="${HOME}/go"
 PATH="${PATH}:/usr/local/go/bin:${GOPATH}/bin"
 PATH="${PATH}:${HOME}/scripts"
 alias o='composer'
+alias gi='go install -v ./...'
 
 eval $(thefuck --alias)
+
+if [ -f ~/projects/toolbox-ng/.functions ]; then
+	source ~/projects/toolbox-ng/.functions
+fi
+
+eval "$(direnv hook zsh)"
