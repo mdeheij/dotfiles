@@ -71,11 +71,14 @@ plugins=(
   toolbox
 )
 
+# User configuration
+if [ -f ~/projects/toolbox-ng/.functions ]; then
+	source ~/projects/toolbox-ng/.functions
+fi
+
 source $ZSH/oh-my-zsh.sh
 
 prompt_context() {}
-
-# User configuration
 
 autoload -U compinit && compinit
 
@@ -110,11 +113,10 @@ PATH="${PATH}:/usr/local/go/bin:${GOPATH}/bin"
 PATH="${PATH}:${HOME}/scripts"
 alias o='composer'
 alias gi='go install -v ./...'
+alias tbx='toolbox-ng'
 
 eval $(thefuck --alias)
 
-if [ -f ~/projects/toolbox-ng/.functions ]; then
-	source ~/projects/toolbox-ng/.functions
-fi
-
 eval "$(direnv hook zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
