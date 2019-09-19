@@ -84,6 +84,8 @@ Plug 'mbbill/undotree'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'scrooloose/nerdcommenter'
 
+Plug 'morhetz/gruvbox'
+
 " Add plugins to &runtimepath
 call plug#end()
 
@@ -142,6 +144,8 @@ au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 " rename the identifier under the cursor to a new name
 au FileType go nmap <Leader>e <Plug>(go-rename)
+
+colorscheme gruvbox
 
 set mouse=a
 set clipboard=unnamedplus
