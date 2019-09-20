@@ -122,7 +122,7 @@ autocmd FileType go nmap <buffer> <leader>t <plug>(go-test)
 autocmd FileType go nmap <buffer> <leader>e <plug>(go-rename)
 autocmd FileType go nmap <buffer> gd <plug>(go-def-vertical)
 autocmd FileType go nmap <buffer> <c-]> <plug>(go-def-vertical)
-autocmd FileType go nmap <buffer> <leader>i <plug>(go-info)
+autocmd FileType go nmap <buffer> <leader>o <plug>(go-info)
 
 " show a list of interfaces which is implemented by the type under your cursor
 au FileType go nmap <Leader>s <Plug>(go-implements)
