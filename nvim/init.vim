@@ -96,9 +96,9 @@ autocmd VimEnter *
   \| endif
 
 "call deoplete#custom#set('_', 'converters',
-"      \ ['converter_auto_paren',
-"      \  'converter_auto_delimiter',
-"      \  'converter_remove_overlap'])
+      "\ ['converter_auto_paren',
+      "\  'converter_auto_delimiter',
+      "\  'converter_remove_overlap'])
 
 " mappings
 
@@ -113,8 +113,10 @@ nmap <F3> :tabclose<CR>
 nmap <F5> :UndotreeToggle<CR>
 nmap <F7> :NERDTreeTabsToggle<CR>
 nmap <F8> :NERDTreeFocus<CR>
-"nmap <C-Left> :tabprevious<CR>
-"nmap <C-Right> :tabnext<CR>
+
+" nnoremap <C-Tab> :bn<CR>
+nmap <C-Left> :tabprevious<CR>
+nmap <C-Right> :tabnext<CR>
 " vim-go mappings
 autocmd FileType go nmap <buffer> <leader>r <plug>(go-run)
 autocmd FileType go nmap <buffer> <leader>b <plug>(go-build)
