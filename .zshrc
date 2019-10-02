@@ -120,3 +120,5 @@ eval $(thefuck --alias)
 eval "$(direnv hook zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*U\nsystem\t%*S\ntotal\t%*E'
