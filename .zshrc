@@ -1,4 +1,4 @@
-TOOLBOX_BOOTSTRAP="$HOME/projects/toolbox/var/bootstrap.zsh"
+TOOLBOX_BOOTSTRAP="$HOME/projects/toolbox-se/var/bootstrap.zsh"
 if [ -f ${TOOLBOX_BOOTSTRAP} ]; then
 	source "${TOOLBOX_BOOTSTRAP}"
 fi
@@ -68,7 +68,7 @@ ZSH_THEME="agnoster"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  toolbox
+  #toolbox
 )
 
 # User configuration
@@ -82,6 +82,7 @@ prompt_context() {}
 
 autoload -U compinit && compinit
 
+SAVEHIST=100000
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -108,14 +109,16 @@ autoload -U compinit && compinit
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+alias tbx='~/go/bin/toolbox-ng'
 GOPATH="${HOME}/go"
 PATH="${PATH}:/usr/local/go/bin:${GOPATH}/bin"
 PATH="${PATH}:${HOME}/scripts"
+PATH="${PATH}:${HOME}/bin"
 alias o='composer'
 alias gi='go install -v ./...'
-alias tbx='toolbox-ng'
 
-eval $(thefuck --alias)
+#eval $(thefuck --alias)
 
 eval "$(direnv hook zsh)"
 
