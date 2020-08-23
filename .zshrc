@@ -123,5 +123,6 @@ alias gi='go install -v ./...'
 eval "$(direnv hook zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -d ~/sdk/go1.14.7/bin ] && PATH="${HOME}/sdk/go1.14.7/bin:${PATH}"
 
 TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*U\nsystem\t%*S\ntotal\t%*E'
