@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 TOOLBOX_BOOTSTRAP="$HOME/projects/toolbox-se/var/bootstrap.zsh"
 if [ -f ${TOOLBOX_BOOTSTRAP} ]; then
 	source "${TOOLBOX_BOOTSTRAP}"
@@ -12,7 +19,8 @@ export ZSH="${HOME}/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+#ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -68,7 +76,7 @@ ZSH_THEME="agnoster"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  #toolbox
+  kubectl
 )
 
 # User configuration
@@ -76,11 +84,20 @@ if [ -f ~/projects/toolbox-ng/.functions ]; then
 	source ~/projects/toolbox-ng/.functions
 fi
 
-source $ZSH/oh-my-zsh.sh
+if [ -f ~/.linuxbrew/bin/brew ]; then
+	eval $(~/.linuxbrew/bin/brew shellenv)
+fi
 
-prompt_context() {}
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
 
 autoload -U compinit && compinit
+
+source $ZSH/oh-my-zsh.sh
+
+# prompt_context() {}
+
 
 SAVEHIST=100000
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -126,3 +143,6 @@ eval "$(direnv hook zsh)"
 [ -d ~/sdk/go1.14.7/bin ] && PATH="${HOME}/sdk/go1.14.7/bin:${PATH}"
 
 TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*U\nsystem\t%*S\ntotal\t%*E'
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
