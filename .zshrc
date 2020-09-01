@@ -99,7 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # prompt_context() {}
 
 
-SAVEHIST=100000
+SAVEHIST=1000000
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -141,8 +141,17 @@ eval "$(direnv hook zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -d ~/sdk/go1.14.7/bin ] && PATH="${HOME}/sdk/go1.14.7/bin:${PATH}"
+[ -d ~/Apps/kubebuilder/bin ] && PATH="${HOME}/Apps/kubebuilder/bin:${PATH}"
 
 TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*U\nsystem\t%*S\ntotal\t%*E'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C "${HOME}/.linuxbrew/Cellar/terraform/0.13.0_1/bin/terraform" terraform
+
+alias changeset-phpcbf='git diff --name-only origin/master | egrep "^(src|test|tests).*\\.php\$" | (echo /dev/null && while read FILE; do if [ -f "$FILE" ]; then echo "$FILE"; fi; done)| xargs -n 3 projectenv phpcbf'
+alias f='ag --color-line-number='\''0;32'\'' --color-match='\''1;31'\'' --color-path='\''0;35'\'''
+alias fa='find . -type f -print0 | xargs -0 grep --color -n'
+alias ff='find . -type f | grep --color'
